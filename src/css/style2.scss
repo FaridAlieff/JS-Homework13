@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300&family=Rancho&display=swap');
+  
+  body {
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #222;
+  }
+  .label {
+    color: rgba(20, 166, 233);
+    font-weight: bold;
+    font-family: Poppins ;
+    margin-right: 10px;
+  }
+  .input-wrapper {
+    position: relative;
+    width: 200px;
+  }
+  .input-wrapper .input-inner {
+    position: relative;
+    z-index: 1;
+    background: transparent;
+    display: block;
+    width: 100%;
+    color: #fff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+  }
+  
+  .input-wrapper .mask {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: rgba(20, 166, 233);
+    z-index: 0;
+    transition: all .3s;
+  }
+  
+  .input-wrapper .input-inner:focus + .mask {
+    height: 100%;
+    box-shadow: 0 0 25px 5px rgba(20, 166, 233, 0.4);
+  }
+  
+  .input-wrapper .input-inner:valid + .mask {
+    height: 100%;
+    box-shadow: 0 0 25px 5px rgba(20, 166, 233, 0.4);
+  }
+
+  @media (max-width: 576px) {
+    .input-inner,
+    .label {
+      font-size: 14px;
+    }
+    .input-wrapper {
+        width: 150px; 
+      }
+  }
+  
